@@ -5,18 +5,23 @@ const API_KEY = "811da3a866d3da02c34a620dc35732a8";
 let units = "metric";
 
 async function getWeatherData(query) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=${units}`;
-  const response = await fetch(url, { mode: "cors" });
-  const currentWeatherData = await response.json();
-  const lat = currentWeatherData.coord.lat;
-  const lon = currentWeatherData.coord.lon;
+  try {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=${units}`;
+    const response = await fetch(url, { mode: "cors" });
+    const currentWeatherData = await response.json();
+    const lat = currentWeatherData.coord.lat;
+    const lon = currentWeatherData.coord.lon;
 
-  const oneCallURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${units}`;
-  const oneCallResponse = await fetch(oneCallURL, { mode: "cors" });
-  const oneCallWeatherData = await oneCallResponse.json();
+    const oneCallURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${units}`;
+    const oneCallResponse = await fetch(oneCallURL, { mode: "cors" });
+    const oneCallWeatherData = await oneCallResponse.json();
 
-  weather.units = units;
-  weather.setWeather(currentWeatherData, oneCallWeatherData);
+    weather.units = units;
+    weather.setWeather(currentWeatherData, oneCallWeatherData);
+    displayController.hideErrorMsg();
+  } catch (err) {
+    displayController.showErrorMsg();
+  }
 }
 
 async function search() {
@@ -43,7 +48,6 @@ async function changeUnits() {
 }
 
 await setDefaultWeather();
-console.log(weather);
 
 // add event listener to search bar
 const searchForm = document.querySelector("#search-form");

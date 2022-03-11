@@ -45,9 +45,6 @@ const weather = (() => {
       const id = oneCallWeatherData.daily[i + 1].weather[0].id;
       days[i] = { weekday, high, low, id };
     }
-
-    console.log(currentWeatherData);
-    console.log(oneCallWeatherData);
   };
 
   return {

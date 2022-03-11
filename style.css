@@ -1,154 +1,160 @@
 body {
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/background.jpg');
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    padding: 80px;
-    box-sizing: border-box;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding: 80px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 #current-weather-container {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 #current-weather {
-    height: 40%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  height: 40%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 #weather-description {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 #location {
-    font-size: 18px;
-    margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 #date,
 #time {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 #time {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #temp {
-    font-size: 60px;
-    font-weight: bold;
+  font-size: 60px;
+  font-weight: bold;
 }
 
 #change-units {
-    font-size: 12px;
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 #weather-img {
-    width: 120px;
-    margin-bottom: 20px;
+  width: 120px;
 }
 
 #search-bar {
-    background: transparent;
-    color: white;
-    border: none;
-    border-bottom: 2px solid white;
-    width: 200px;
-    padding-left: 10px;
-    padding-bottom: 5px;
+  background: transparent;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+  width: 200px;
+  padding-left: 10px;
+  padding-bottom: 5px;
 }
 
 #search-bar:focus {
-    outline: none;
+  outline: none;
 }
 
 ::placeholder {
-    color: white;
+  color: white;
 }
 
 #search-button {
-    background-image: url('images/search.png');
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-left: -33px;
-    margin-bottom: 7px;
+  background-image: url("images/search.png");
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: -33px;
+  margin-bottom: 7px;
 }
 
 #search-button img {
-    width: 20px;
-    object-fit: cover;
+  width: 20px;
+  object-fit: cover;
+}
+
+#error-msg {
+  font-size: 12px;
+  margin-top: 8px;
+  display: none;
 }
 
 #weather-misc {
-    margin-left: auto;
-    margin-right: 40px;
+  margin-left: auto;
+  margin-right: 40px;
 }
 
 .misc-item {
-    display: flex;
-    margin-bottom: 20px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .misc-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 .misc-title {
-    font-size: 12px;
-    margin-top: 4px;
+  font-size: 12px;
+  margin-top: 4px;
 }
 
 .misc-value {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 #forecast {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
 }
 
 .day-weekday {
-    font-size: 20px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .day-high {
-    font-size: 26px;
-    font-weight: bold;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .day-low {
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
 .day-img {
-    width: 44px;
-    height: 44px;
+  width: 44px;
+  height: 44px;
 }

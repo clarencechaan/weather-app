@@ -1,108 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <script type="module" src="weather.js"></script>
     <script type="module" src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="current-weather-container">
-        <div id="current-weather">
-            <div id="weather-description"></div>
-            <div id="location"></div>
-            <div id="date"></div>
-            <div id="time"></div>
-            <div id="temp"></div>
-            <button id="change-units">Display Imperial</button>
-            <img src="images/sun.png" alt="" id="weather-img">
-            <form action="#" method="get" id="search-form">
-                <input type="search" placeholder="Search location..." id="search-bar">
-                <button id="search-button">
-                    <img src="images/search.png" alt="">
-                </button>
-            </form>
+      <div id="current-weather">
+        <div id="weather-description"></div>
+        <div id="location"></div>
+        <div id="date"></div>
+        <div id="time"></div>
+        <div id="temp"></div>
+        <button id="change-units">Display Imperial</button>
+        <img src="images/sun.png" alt="" id="weather-img" />
+        <form action="#" method="get" id="search-form">
+          <input
+            type="search"
+            placeholder="Search location..."
+            id="search-bar"
+          />
+          <button id="search-button">
+            <img src="images/search.png" alt="" />
+          </button>
+        </form>
+        <div id="error-msg">
+          <div>Location not found.</div>
+          <div>
+            Search must be in the form of "City", "City, State" or "City,
+            Country".
+          </div>
         </div>
-        <div id="weather-misc">
-            <div class="misc-item">
-                <img src="images/feels-like.png" alt="" class="misc-image">
-                <div>
-                    <div class="misc-title">Feels Like</div>
-                    <div id="feels-like" class="misc-value"></div>
-                </div>
-            </div>
-            <div class="misc-item">
-                <img src="images/humidity.png" alt="" class="misc-image">
-                <div>
-                    <div class="misc-title">Humidity</div>
-                    <div id="humidity" class="misc-value"></div>
-                </div>
-            </div>
-            <div class="misc-item">
-                <img src="images/chance-of-rain.png" alt="" class="misc-image">
-                <div>
-                    <div class="misc-title">Chance of Rain</div>
-                    <div id="chance-of-rain" class="misc-value"></div>
-                </div>
-            </div>
-            <div class="misc-item">
-                <img src="images/windspeed.png" alt="" class="misc-image">
-                <div>
-                    <div class="misc-title">Wind Speed</div>
-                    <div id="wind-speed" class="misc-value"></div>
-                </div>
-            </div>
+      </div>
+      <div id="weather-misc">
+        <div class="misc-item">
+          <img src="images/feels-like.png" alt="" class="misc-image" />
+          <div>
+            <div class="misc-title">Feels Like</div>
+            <div id="feels-like" class="misc-value"></div>
+          </div>
         </div>
+        <div class="misc-item">
+          <img src="images/humidity.png" alt="" class="misc-image" />
+          <div>
+            <div class="misc-title">Humidity</div>
+            <div id="humidity" class="misc-value"></div>
+          </div>
+        </div>
+        <div class="misc-item">
+          <img src="images/chance-of-rain.png" alt="" class="misc-image" />
+          <div>
+            <div class="misc-title">Chance of Rain</div>
+            <div id="chance-of-rain" class="misc-value"></div>
+          </div>
+        </div>
+        <div class="misc-item">
+          <img src="images/windspeed.png" alt="" class="misc-image" />
+          <div>
+            <div class="misc-title">Wind Speed</div>
+            <div id="wind-speed" class="misc-value"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="forecast">
-        <div class="day">
-            <div class="day-weekday"></div>
-            <div class="day-high"></div>
-            <div class="day-low"></div>
-            <img src="images/sun.png" alt="" class="day-img">
-        </div>
-        <div class="day">
-            <div class="day-weekday"></div>
-            <div class="day-high"></div>
-            <div class="day-low"></div>
-            <img src="images/sun.png" alt="" class="day-img">
-        </div>
-        <div class="day">
-            <div class="day-weekday"></div>
-            <div class="day-high"></div>
-            <div class="day-low"></div>
-            <img src="images/sun.png" alt="" class="day-img">
-        </div>
-        <div class="day">
-            <div class="day-weekday"></div>
-            <div class="day-high"></div>
-            <div class="day-low"></div>
-            <img src="images/sun.png" alt="" class="day-img">
-        </div>
-        <div class="day">
-            <div class="day-weekday"></div>
-            <div class="day-high"></div>
-            <div class="day-low"></div>
-            <img src="images/sun.png" alt="" class="day-img">
-        </div>
-        <div class="day">
-            <div class="day-weekday"></div>
-            <div class="day-high"></div>
-            <div class="day-low"></div>
-            <img src="images/sun.png" alt="" class="day-img">
-        </div>
-        <div class="day">
-            <div class="day-weekday"></div>
-            <div class="day-high"></div>
-            <div class="day-low"></div>
-            <img src="images/sun.png" alt="" class="day-img">
-        </div>
+      <div class="day">
+        <div class="day-weekday"></div>
+        <div class="day-high"></div>
+        <div class="day-low"></div>
+        <img src="images/sun.png" alt="" class="day-img" />
+      </div>
+      <div class="day">
+        <div class="day-weekday"></div>
+        <div class="day-high"></div>
+        <div class="day-low"></div>
+        <img src="images/sun.png" alt="" class="day-img" />
+      </div>
+      <div class="day">
+        <div class="day-weekday"></div>
+        <div class="day-high"></div>
+        <div class="day-low"></div>
+        <img src="images/sun.png" alt="" class="day-img" />
+      </div>
+      <div class="day">
+        <div class="day-weekday"></div>
+        <div class="day-high"></div>
+        <div class="day-low"></div>
+        <img src="images/sun.png" alt="" class="day-img" />
+      </div>
+      <div class="day">
+        <div class="day-weekday"></div>
+        <div class="day-high"></div>
+        <div class="day-low"></div>
+        <img src="images/sun.png" alt="" class="day-img" />
+      </div>
+      <div class="day">
+        <div class="day-weekday"></div>
+        <div class="day-high"></div>
+        <div class="day-low"></div>
+        <img src="images/sun.png" alt="" class="day-img" />
+      </div>
+      <div class="day">
+        <div class="day-weekday"></div>
+        <div class="day-high"></div>
+        <div class="day-low"></div>
+        <img src="images/sun.png" alt="" class="day-img" />
+      </div>
     </div>
-</body>
+  </body>
 </html>

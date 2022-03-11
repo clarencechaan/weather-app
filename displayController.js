@@ -146,7 +146,23 @@ const displayController = (() => {
     }
   };
 
-  return { setWeather, getSearchTerm, toggleUnitSwitcherText };
+  const showErrorMsg = () => {
+    const errorMsg = document.querySelector("#error-msg");
+    errorMsg.style.display = "block";
+  };
+
+  const hideErrorMsg = () => {
+    const errorMsg = document.querySelector("#error-msg");
+    errorMsg.style.display = "none";
+  };
+
+  return {
+    setWeather,
+    getSearchTerm,
+    toggleUnitSwitcherText,
+    showErrorMsg,
+    hideErrorMsg,
+  };
 })();
 
 export default displayController;
