@@ -31,7 +31,7 @@ const weather = (() => {
     weather.temp = Math.round(currentWeatherData.main.temp);
     weather.feelsLike = Math.round(currentWeatherData.main.feels_like);
     weather.humidity = currentWeatherData.main.humidity;
-    weather.chanceOfRain = oneCallWeatherData.daily[0].pop;
+    weather.chanceOfRain = oneCallWeatherData.daily[0].pop * 100;
     weather.windSpeed = Math.round(currentWeatherData.wind.speed * 10) / 10;
     weather.id = currentWeatherData.weather[0].id;
     weather.isNight = date.getHours() < 6 || date.getHours() > 18;
