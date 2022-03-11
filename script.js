@@ -51,7 +51,10 @@ await setDefaultWeather();
 
 // add event listener to search bar
 const searchForm = document.querySelector("#search-form");
-searchForm.onsubmit = search;
+searchForm.onsubmit = () => {
+  search();
+  return;
+};
 
 // add event listener to unit switcher
 const unitSwitcher = document.querySelector("#change-units");
