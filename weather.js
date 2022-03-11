@@ -38,7 +38,7 @@ const weather = (() => {
 
     for (let i = 0; i < 7; i++) {
       const weekday = fm.formatWeekday(
-        fm.convertUTCToDate(oneCallWeatherData.daily[i + 1].dt)
+        fm.convertUTCToDate(oneCallWeatherData.daily[i + 1].dt + 18000)
       );
       const high = Math.round(oneCallWeatherData.daily[i + 1].temp.max);
       const low = Math.round(oneCallWeatherData.daily[i + 1].temp.min);
