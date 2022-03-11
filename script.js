@@ -53,7 +53,7 @@ await setDefaultWeather();
 const searchForm = document.querySelector("#search-form");
 searchForm.onsubmit = () => {
   search();
-  return;
+  return false;
 };
 
 // add event listener to unit switcher
