@@ -17,7 +17,7 @@ const weather = (() => {
 
   const setWeather = (currentWeatherData, oneCallWeatherData) => {
     const date = fm.convertUTCToDate(
-      currentWeatherData.dt + currentWeatherData.timezone + 18000
+      currentWeatherData.dt + currentWeatherData.timezone + 14400
     );
 
     weather.location = currentWeatherData.name;
@@ -38,7 +38,7 @@ const weather = (() => {
 
     for (let i = 0; i < 7; i++) {
       const weekday = fm.formatWeekday(
-        fm.convertUTCToDate(oneCallWeatherData.daily[i + 1].dt + 18000)
+        fm.convertUTCToDate(oneCallWeatherData.daily[i + 1].dt + 14400)
       );
       const high = Math.round(oneCallWeatherData.daily[i + 1].temp.max);
       const low = Math.round(oneCallWeatherData.daily[i + 1].temp.min);
